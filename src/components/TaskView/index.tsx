@@ -1,5 +1,5 @@
 import React from "react";
-import { TaskViewContainer, TaskViewCard, TaskViewContent } from "./style";
+import { TaskViewCard, TaskViewContent } from "./style";
 import { ITaskContent } from "../../interfaces/task-content";
 
 interface ITaskViewProps {
