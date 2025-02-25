@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# 🚀 Ignite Challenge #1 - To-Do List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is an interactive **To-Do List**, allowing users to **add, delete, and mark tasks as completed**. Additionally, the application displays task progress in real time.
 
-Currently, two official plugins are available:
+![alt text](image-1.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- Add new tasks
+- Delete tasks
+- Mark tasks as completed
+- Track the progress of completed tasks
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🛠 Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+This project was developed using the following technologies:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React
+- TypeScript
+- Vite
+- Styled Componentes
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## 🚀 How to Run the Project
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Prerequisites
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Before starting, make sure you have **Node.js** and **npm** (or **yarn**) installed on your machine.
+
+### Steps to Run the Application
+
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/emillylamotte/ignite-todo-list.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd ignite-todo-list
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+   or
+   ```sh
+   yarn install
+   ```
+4. Start the application:
+   ```sh
+   npm run dev
+   ```
+   or
+   ```sh
+   yarn dev
+   ```
+5. Open in your browser: `http://localhost:5173`
+
