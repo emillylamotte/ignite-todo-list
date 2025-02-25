@@ -3,10 +3,13 @@ import styled from "styled-components";
 export const Header = styled.div`
   width: 100%;
   height: 200px;
-  background-color:  ${({ theme }) => theme.colors.gray700};
+  background-color: ${({ theme }) => theme.colors.gray700};
   display: flex;
   justify-content: center;
-  align-itens: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 20;
   img {
     width: 180px;
     height: 50;
