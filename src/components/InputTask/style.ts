@@ -36,6 +36,10 @@ export const SubmitButton = styled.button`
     border: none;
     cursor: pointer;
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 `
 export const GeneralContainer = styled.div`
     display: flex;
