@@ -35,3 +35,30 @@ export const TaskViewContent = styled.div`
     padding: 12px;
     text-indent: 24px;
 `;
+
+export const CheckboxContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+`;
+
+export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
+    display: none;
+`;
+
+export const CustomCheckbox = styled.span<{ checked: boolean }>`
+    width: 20px;
+    height: 20px;
+    border: 2px solid ${(props) => (props.checked ? "#5E60CE" : "#4EA8DE")};
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    background-color: ${(props) => (props.checked ? "#5E60CE" : "transparent")};
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+`;
+
+export const TaskText = styled.span<{ checked: boolean }>`
+    text-decoration: ${(props) => (props.checked ? "line-through" : "none")};
+    margin-left: 10px;
+`;

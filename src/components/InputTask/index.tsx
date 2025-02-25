@@ -28,6 +28,14 @@ export function InputTask() {
         setTasks(newTasksList)
     }
 
+    const handleCompleteTask = (taskContent: string) => {
+        setTasks(tasks.map(task =>
+            task.content === taskContent ? { ...task, completed: !task.completed } : task
+        ));
+    };
+
+    const completedTasks = tasks.filter(task => task.completed).length;
+
     useEffect(() => {
         console.log(tasks);
     }, [tasks])
@@ -42,25 +50,25 @@ export function InputTask() {
                 />
                 <SubmitButton
                     name="Criar"
-                    onClick={() => handleIncludeNewTask({ content: typedTask })}
+                    onClick={() => handleIncludeNewTask({ content: typedTask, completed: false })}
                 >
                     Criar
                 </SubmitButton>
             </TextFieldContainer>
             <InfoContainer>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <BlueParagraph>Tarefas criadas</BlueParagraph>
-                        <Badge>{tasks.length}</Badge>
-                    </div>
-                    <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <PurpleParagraph>Concluídas</PurpleParagraph>
-                        <Badge>2 de 5</Badge>
-                    </div>
-                </InfoContainer>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <BlueParagraph>Tarefas criadas</BlueParagraph>
+                    <Badge>{tasks.length}</Badge>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <PurpleParagraph>Concluídas</PurpleParagraph>
+                    <Badge>{completedTasks} de {tasks.length}</Badge>
+                </div>
+            </InfoContainer>
             <TaskViewContainer>
                 {tasks.length > 0 && tasks.map((t: ITaskContent) => {
                     return (
-                        <TaskView task={t} onDeletTask={handleDeleteTask} />
+                        <TaskView key={t.content} task={t} onDeletTask={handleDeleteTask} onCheckTask={handleCompleteTask} />
                     )
                 })}
             </TaskViewContainer>
