@@ -1,6 +1,7 @@
 # 🚀 Ignite Challenge #1 - To-Do List
 
-This project is an interactive **To-Do List**, allowing users to **add, delete, and mark tasks as completed**. Additionally, the application displays task progress in real time.
+This project is an interactive **To-Do List**, allowing users to **add, delete, and mark tasks as completed**. Additionally, the application displays task progress in real time. 
+The project is based on the Figma designed by RocketSeat for the challenge, but the code is 100% original.
 
 ![alt text](image-1.png)
 
