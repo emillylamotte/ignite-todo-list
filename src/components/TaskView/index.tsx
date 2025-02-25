@@ -1,6 +1,7 @@
 import React from "react";
-import { CheckboxContainer, CustomCheckbox, HiddenCheckbox, TaskText, TaskViewCard, TaskViewContent } from "./style";
+import { CheckboxContainer, CustomCheckbox, DeleteButton, HiddenCheckbox, TaskText, TaskViewCard, TaskViewContent } from "./style";
 import { ITaskContent } from "../../interfaces/task-content";
+import { TrashIcon } from "../../icons/TrashIcons";
 
 interface ITaskViewProps {
     task: ITaskContent;
@@ -28,7 +29,7 @@ export function TaskView({ task, onDeletTask, onCheckTask }: ITaskViewProps) {
                             {task.content}
                         </TaskText>
                     </div>
-                    <button onClick={() => handleDeleteComment()}>excluir</button>
+                    <DeleteButton  onClick={() => handleDeleteComment()}><TrashIcon /></DeleteButton>
                 </TaskViewContent>
             </TaskViewCard>
         </>

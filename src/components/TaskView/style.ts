@@ -62,3 +62,9 @@ export const TaskText = styled.span<{ checked: boolean }>`
     text-decoration: ${(props) => (props.checked ? "line-through" : "none")};
     margin-left: 10px;
 `;
+
+export const DeleteButton = styled.button`
+    background-color:  ${({ theme }) => theme.colors.gray500};
+    cursor: pointer;
+    border: none;
+`

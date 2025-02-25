@@ -13,6 +13,7 @@ import {
 import { TaskView } from "../TaskView";
 import { TaskViewContainer } from "../TaskView/style";
 import { ITaskContent } from "../../interfaces/task-content";
+import { PlusIcon } from "../../icons/PlusIcon";
 
 export function InputTask() {
     const [tasks, setTasks] = useState<ITaskContent[]>([]);
@@ -53,6 +54,7 @@ export function InputTask() {
                     onClick={() => handleIncludeNewTask({ content: typedTask, completed: false })}
                 >
                     Criar
+                    <PlusIcon />
                 </SubmitButton>
             </TextFieldContainer>
             <InfoContainer>
