@@ -1,4 +1,3 @@
-import React from "react";
 import { CheckboxContainer, CustomCheckbox, DeleteButton, HiddenCheckbox, TaskText, TaskViewCard, TaskViewContent } from "./style";
 import { ITaskContent } from "../../interfaces/task-content";
 import { TrashIcon } from "../../icons/TrashIcons";

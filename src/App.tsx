@@ -1,4 +1,3 @@
-import React from "react";
 import { Header } from "./style";
 import AppLogo from './assets/Logo.svg';
 import { InputTask } from "./components/InputTask";
